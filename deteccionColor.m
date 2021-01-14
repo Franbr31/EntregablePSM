@@ -1,11 +1,11 @@
-function color = deteccionColor(IN)
+function hh = deteccionColor(IN)
   [filas, cols, canal] = size(IN);
   %colores = coloresProhibidos(IN);
  
   [R, G, B] = Canales(IN);
-  Rnorm = normaliza(R, 1); 
-  Gnorm = normaliza(G, 2);
-  Bnorm = normaliza(B, 3);
+  Rnorm = normalizaImagen(R, 1); 
+  Gnorm = normalizaImagen(G, 2);
+  Bnorm = normalizaImagen(B, 3);
 
   for i=1:filas
      for j=1:cols
@@ -22,8 +22,10 @@ function color = deteccionColor(IN)
 
 OUT = uint8(H);
 hh = histogram(OUT, 1, 360);
-
+%figure();
+%showHisto(hh,360);
   
   
   
 endfunction
+
