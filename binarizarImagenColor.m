@@ -1,6 +1,6 @@
-function imagenBinaria= binarizarImagenColor(image)
+function imagenBinaria= binarizarImagenColor(IN)
 %Pasar una imagen a blanco y negro para poder binarizarla:
-IN = imread(image); %imagen de entrada
+%IN = imread(image); %imagen de entrada
 [filas, cols, canales] = size(IN);
 figure();
 imshow(IN); %mostramos la imagen original
