@@ -16,14 +16,20 @@ function hh = deteccionColor(IN)
      endfor
   endfor
 
-%Completar por el alumno
-%Crear un histograma para H 
-%y almacénalo en hh.
+
 
 OUT = uint8(H);
 hh = histogram(OUT, 1, 360);
-%figure();
-%showHisto(hh,360);
+aux = 0;
+indice = 0;
+for k=1:size(hh)(2)
+   if hh(k) > aux
+      aux = hh(k);
+      indice = k;
+     endif
+  endfor
+
+color = indice -1;
   
   
   
