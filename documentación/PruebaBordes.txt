@@ -1,6 +1,6 @@
 PRUEBA DE BORDEADO DE IMAGEN
 (Para poder, a futuro, calcular el perímetro de la imagen de la fruta/verdura
-contando)
+contando los píxeles del borde)
 
 
 function bordes= sobel(IN)
@@ -8,6 +8,8 @@ function bordes= sobel(IN)
   maskGy = [-1 -1 -1; 0 0 0; 1 1 1];%%%en el caso de prewitt 
   maskGx = [-1 0 1; -1 0 1; -1 0 1]; 
  
+  maskGy = [-1 -2 -1; 0 0 0; 1 2 1]; 
+  maskGx = [-1 0 1; -2 0 2; -1 0 1]; %%sobel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Aplicamos máscara Gy 
   R = imConvolve(IN, maskGy);
 

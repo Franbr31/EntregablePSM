@@ -2,8 +2,8 @@ function imagenBinaria= binarizarImagenColor(IN)
 %Pasar una imagen a blanco y negro para poder binarizarla:
 %IN = imread(image); %imagen de entrada
 [filas, cols, canales] = size(IN);
-figure();
-imshow(IN); %mostramos la imagen original
+%figure();
+%imshow(IN); %mostramos la imagen original
 imEscalaGrises = rgb2gray(IN); %transformamos valores rgb en hls y nos quedamos 
 %con el brillo. Así, conseguiremos una escala de grises
 %---------------------figure(2);
@@ -23,6 +23,6 @@ hold on%para dibujar la línea sobre el histograma
 %el umbral que ha calculado el algoritmo resaltado en azul
 imagenBinaria=myImage2BW(imEscalaGrises, umbral);%binarizamos la imagen con el umbral óptimo
 %figure(4)
-%imshow(imagenBinaria);;%mostramos la imagen binarizada por el umbral 
+imshow(imagenBinaria);;%mostramos la imagen binarizada por el umbral 
 
 endfunction

@@ -1,9 +1,16 @@
 Perímetro de la fruta:
 1- Imagen a blanco y negro con parte 6 de práctica 6-> RGB a brillo
 2- Binarizamos para quedarnos con silueta de la fruta.
-2- Detección bordes imagen en b/n Sovel-
+2- Detección bordes imagen en b/n P (Sobel no, Prewitt)
 3- Histograma imagen resultante
--píxeles blancos de histograma serán los bordes--> se cuentan en histograma y es perímetro.
+-píxeles blancos de histograma serán los bordes--> se cuentan en histograma y es perímetro----
+(tenemos hasta los bordes)
+4. Contar píxeles blancos
+
+---Detección fruta
+
+---Tamaño: binarizar imagen, coger todos los píxeles negros y contarlos.
+
 
 Color:
 histograma de color: nos quedamos con color con mayor valor del histograma exceptuando el
@@ -12,7 +19,6 @@ Píxeles de las esquinas no se tendrían en cuenta.
 ////¿Cuantizar colores?
 Ese píxel-> rgb a hls y nos quedamos con la h. La H indica el color.
 
-Tamaño: binarizar imagen, coger todos los píxeles negros y pasar a escala.
 
 Longitud: píxeles negros, los 2 más alejados determinan longitud.
 

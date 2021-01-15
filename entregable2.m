@@ -5,6 +5,6 @@ binaria=binarizarImagenColor(IN)
 figure()
 imshow(binaria)
 %OUT = deteccionFruta(IN)
-imagenresultado=sobel(binaria);
+imagenresultado=prewitt(binaria);
 imshow(imagenresultado)
 endfunction

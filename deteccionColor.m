@@ -31,7 +31,8 @@ for k=1:size(hh)(2)
 
 color = indice -1;
   
-  
+figure();
+showHisto(hh,360);  
   
 endfunction
 
