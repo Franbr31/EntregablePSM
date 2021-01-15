@@ -19,10 +19,10 @@ histo= histogram(imEscalaGrises);%hallamos el histograma para poder identificar
 %del histograma
 hold on%para dibujar la línea sobre el histograma
 
-stem(umbral,histo(umbral),'b');%mostramos el histograma resultante con
+%stem(umbral,histo(umbral),'b');%mostramos el histograma resultante con
 %el umbral que ha calculado el algoritmo resaltado en azul
 imagenBinaria=myImage2BW(imEscalaGrises, umbral);%binarizamos la imagen con el umbral óptimo
-%---------------------figure(4)
-%---------------------imshow(imagenBinaria);;%mostramos la imagen binarizada por el umbral 
+%figure(4)
+%imshow(imagenBinaria);;%mostramos la imagen binarizada por el umbral 
 
 endfunction

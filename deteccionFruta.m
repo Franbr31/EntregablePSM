@@ -1,4 +1,5 @@
 function OUT = deteccionFruta(imgOriginal)
+  imshow(imgOriginal);
   [filas, cols, canales] = size(imgOriginal);
   imgBinarizada = binarizarImagenColor(imgOriginal);
   
@@ -13,6 +14,6 @@ function OUT = deteccionFruta(imgOriginal)
     endfor
   endfor
   
-  
+  imshow(OUT);
   
 endfunction
