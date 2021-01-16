@@ -19,11 +19,23 @@ function color = color(imgOriginal, imgBinarizada)
   endfor
   
   n1 = fix(rand()*tam);
-  %n2 = rand()*tam;
-  %n3 = rand()*tam;
-  %n4 = rand()*tam;
-  
-  color = imgOriginal(vectorI(n1), vectorJ(n1),:);
+  n2 = fix(rand()*tam);
+  n3 = fix(rand()*tam);
+  n4 = fix(rand()*tam);
+  n = [n1, n2, n3, n4];
+ 
+  colorRepe = 0;
+  for k = 1:4
+     aux = k+1;
+     for l=aux:size(n)(2)
+        if(imgOriginal(vectorI(n(k)), vectorJ(n(k)),:) == imgOriginal(vectorI(n(l)), vectorJ(n(l)),:)) 
+          colorRepe = k;
+        endif 
+         
+       endfor
+       
+    endfor
+  color = imgOriginal(vectorI(n(k)), vectorJ(n(k)),:);
   
   
   
