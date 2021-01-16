@@ -23,6 +23,6 @@ hold on%para dibujar la línea sobre el histograma
 %el umbral que ha calculado el algoritmo resaltado en azul
 imagenBinaria=myImage2BW(imEscalaGrises, umbral);%binarizamos la imagen con el umbral óptimo
 %figure(4)
-imshow(imagenBinaria);;%mostramos la imagen binarizada por el umbral 
+imshow(imagenBinaria);%mostramos la imagen binarizada por el umbral 
 
 endfunction

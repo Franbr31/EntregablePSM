@@ -1,10 +1,10 @@
-function OUT= deteccionBordes2(imgOriginal)
+function OUT= deteccionBordes2(imgOriginal, imgBordes)
   
-  imshow(imgOriginal);
+  %imshow(imgOriginal);
   [filas, cols, canales] = size(imgOriginal);
-  imgBinarizada = binarizarImagenColor(imgOriginal);
-  imgBordes = prewitt(imgBinarizada);
-  h = histogram(imgBordes,1);
+  %imgBinarizada = binarizarImagenColor(imgOriginal);
+  %imgBordes = prewitt(imgBinarizada);
+  %h = histogram(imgBordes,1);
   ngFondo=imgBordes(1,1);
   
   %ngBorde=1;
@@ -28,6 +28,6 @@ function OUT= deteccionBordes2(imgOriginal)
     endfor
   endfor
   
- imshow(OUT);
+ %imshow(OUT);
    
 endfunction

@@ -1,5 +1,6 @@
 function hh = deteccionColor(IN)
   [filas, cols, canal] = size(IN);
+  colores = ['rojo', 'naranja','amarillo','verde claro','verde oscuro','verde agua','celeste','azul claro','azul','morado','rosa','fucsia']
   %colores = coloresProhibidos(IN);
  
   [R, G, B] = Canales(IN);
