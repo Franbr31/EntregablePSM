@@ -1,7 +1,37 @@
 function alimento = clasificaAlimento(imagenOrinal, imagenBinarizada)
-  alimentos = ['tomate','pera','manzana','naranja','fila de plátanos','pera','berenjena','brócoli','zanahoria','pimiento','plátano'];
-  BD = [21324 'rojo'; 'verde claro' ];
-  colores = ['rojo' 0 ; 'naranja' 30; 'amarillo' 60; 'verde claro' 90; 'verde oscuro' 120; 'verde agua' 150; 'celeste' 180; 'azul pavo' 210; 'azul oscuro' 240;'morado' 270; 'rosa' 300;'fucsia' 330];
+  alimentos = ['tomate','pera','manzana','naranja','fila de plátanos','berenjena','brócoli','zanahoria','pimiento','plátano'];
+  BD_TAM = [21324,22338,12558,26492,18541,23947,8566,8354,18861,11936];
+  BD_COLORES = ['rojo','verde claro','roja','naranja','amarillo','rosa','verde claro','naranja','rojo','amarillo'];
+  colores = ['rojo','naranja','amarillo','verde claro','verde oscuro','verde agua','celeste','azul pavo','azul oscuro','morado','rosa','fucsia'];
+  grados = [0,30,60,90,120,150,180,210,240,270,300,330];
+  tam = areaAlimento(imagenBinarizada);
+  %color = color(imagenOrinal,imagenBinarizada);
+  %px = color(1,1,:);
+  %[h,l,s] = rgb2hls(px(1),px(2),px(3));
+  candidato = 0;
+  for i=1:size(alimentos)(2)
+     if(tam == BD_TAM(i))
+      candidato = i;
+     endif
+    
+  endfor
+  alimento = alimentos(candidato); 
   
+ % colorIdeal = BD_COLORES(candidato);
+  %colorReal = '';
+  
+   %  if (h>=345) || ((h>=0) && (h<15))
+    %    colorReal = 'rojo';
+     %  else
+      %   for j=2:size(alimentos)(2)
+       %      if (h>= (grados(j)-15)) && (h< (grados(j)+15))
+        %        colorReal = colores(j);
+         %      endif
+          %endfor
+        %endif
+   
+  %if colorReal != colorIdeal
+   %  BD_COLORES(candidato) = colorReal;    
+    %endif
   
 endfunction
