@@ -1,8 +1,7 @@
-%
+
 function [umbral, mu1, mu2] = mvThreshold(histo) 
-% El algoritmo presupone que el histograma es Binodal
-% Devuelve el umbral y la posición de los máximos de 
-% los dos nodos principales.
+%Todo el código está documentado en el PDF DocumentaciónEntregable2.pdf
+
 SA = ACS(histo);
 M = ACProm(histo);
 
@@ -20,26 +19,19 @@ endfunction
 
 
 function SA= ACS(histo)
-% Calcula la suma correlativa hasta del histograma
-
 SA = zeros(1,256);
 SA(1) = histo(1);
 for i=2:256
   SA(i)=SA(i-1)+histo(i);
 endfor
-
-%Suma acumulativa desde 2 a 256 de histo
-
 endfunction
 
 
 function M = ACProm(histo) 
-% 
 M = zeros(1,256);
 M(1) = 0;
 for i=2:256
   M(i)=M(i-1)+(i-1)*histo(i);
 endfor
-%Suma acumulativa de M: posicion anterior por valor de histo mas valor anterior de M (pista i=2:256)
 
 endfunction

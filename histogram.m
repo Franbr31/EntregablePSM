@@ -1,4 +1,5 @@
 function h = histogram(image, canal)
+%Todo el código está documentado en el PDF DocumentaciónEntregable2.pdf
 h=zeros(1,256);
 [filas, cols, canales]= size(image);
 

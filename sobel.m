@@ -9,7 +9,7 @@ function bordes= sobel(IN)
 %Reajuste de la imagen
 maximo= max(max(R));
 
-if (maximo>255)%[c] Insertar la codicion para reajustar
+if (maximo>255)
   RR = imRemap(R); 
   %figure();
   bordes = imConvolve(RR, maskGx);
@@ -21,11 +21,10 @@ else
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Aplicamos máscara Gx
  
  
-
 %Reajuste de la imagen
 maximo= max(max(bordes));
 
-if (maximo>255)%[c] Insertar la codicion para reajustar
+if (maximo>255)
   RR = imRemap(bordes); 
   bordes= RR;
   figure();

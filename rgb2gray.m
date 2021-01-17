@@ -1,4 +1,5 @@
 function gray = rgb2gray(image)
+%Todo el código está documentado en el PDF DocumentaciónEntregable2.pdf
 
 [filas, cols, canales] = size(image);
 i = [1:filas];

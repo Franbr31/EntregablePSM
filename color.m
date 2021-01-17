@@ -1,7 +1,6 @@
 function color = color(imgOriginal, imgBinarizada)
-   %imshow(imgOriginal);
+  %Todo el código está documentado en el PDF DocumentaciónEntregable2.pdf
   [filas, cols, canales] = size(imgBinarizada);
-  %imgBinarizada = binarizarImagenColor(imgOriginal);
   color = imgOriginal;
   tam = areaAlimento(imgBinarizada);
   vectorI = zeros(tam);
@@ -24,7 +23,7 @@ function color = color(imgOriginal, imgBinarizada)
   n4 = fix(rand()*tam);
   n = [n1, n2, n3, n4];
  
-  colorRepe = 0;
+  colorRepe = 1;
   for k = 1:4
      aux = k+1;
      for l=aux:size(n)(2)
@@ -36,11 +35,8 @@ function color = color(imgOriginal, imgBinarizada)
        
     endfor
   
-  if colorRepe != 0
-  color = imgOriginal(vectorI(n(k)), vectorJ(n(k)),:);
-  else
   color = imgOriginal(vectorI(n(colorRepe)), vectorJ(n(colorRepe)),:);
-  endif
+
   
   
   

@@ -1,7 +1,7 @@
 function OUT = deteccionFruta(imgOriginal, imgBinarizada)
-  %imshow(imgOriginal);
+  %Todo el código está documentado en el PDF DocumentaciónEntregable2.pdf
+
   [filas, cols, canales] = size(imgOriginal);
-  %imgBinarizada = binarizarImagenColor(imgOriginal);
   
   for i=1:filas
     for j=1:cols
@@ -14,6 +14,6 @@ function OUT = deteccionFruta(imgOriginal, imgBinarizada)
     endfor
   endfor
   
-  %imshow(OUT);
+
   
 endfunction

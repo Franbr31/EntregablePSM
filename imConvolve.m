@@ -3,7 +3,6 @@ function R = imConvolve(image, mask)
 % Mask(n, m) – matriz con los valores de la máscara
 % R(n,m)	-  Imagen resultante
 
-%[c]  Convierte a tipos FLOAT imagen y mask
 image = double(image);
 mask = double(mask);
 
@@ -30,8 +29,6 @@ function val = aplicaMascara(image, n, m, mask)
 val = single(0);
 
 [filas, cols] = size(mask);
-
-  %[c] Recorrer toda la mascara calculando el resultado de aplicar la mascara como se establece en el enunciado de la practica
 
 for k=1:filas 
   for l=1:cols

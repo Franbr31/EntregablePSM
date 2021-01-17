@@ -1,5 +1,5 @@
 function normal = normalizaImagen(IN, canal)
-    %Dividir entre 255 cada pixel, usar castings para convertir a float antes de dividir
+    
 [filas,cols,canales]=size(IN);
 i = [1:filas];
 j = [1:cols];   

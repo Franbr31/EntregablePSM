@@ -1,4 +1,5 @@
 function area = areaAlimento(imgBinarizada)
+  %Todo el código está documentado en el PDF DocumentaciónEntregable2.pdf
   [filas, cols, canales] = size(imgBinarizada);
 
   area = 0;
