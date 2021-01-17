@@ -40,7 +40,7 @@ function color = color(imgOriginal, imgBinarizada)
   color = imgOriginal(vectorI(n(k)), vectorJ(n(k)),:);
   else
   color = imgOriginal(vectorI(n(colorRepe)), vectorJ(n(colorRepe)),:);
-  
+  endif
   
   
   
