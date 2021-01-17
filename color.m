@@ -35,8 +35,11 @@ function color = color(imgOriginal, imgBinarizada)
        endfor
        
     endfor
-  color = imgOriginal(vectorI(n(k)), vectorJ(n(k)),:);
   
+  if colorRepe != 0
+  color = imgOriginal(vectorI(n(k)), vectorJ(n(k)),:);
+  else
+  color = imgOriginal(vectorI(n(colorRepe)), vectorJ(n(colorRepe)),:);
   
   
   
