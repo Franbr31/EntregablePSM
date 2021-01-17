@@ -4,8 +4,7 @@ function out = imRemap(image)
 maxval = max(max(image));
 minval = min(min(image));
 
-minval
-maxval
+
 
 [filas,cols]=size(image);
 

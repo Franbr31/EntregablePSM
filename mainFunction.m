@@ -1,15 +1,15 @@
-function OUT = mainFunction(nombreRutaImagen)
+function OUT = mainFunction()
 clc;
 close all;
 %Todas las funciones están documentadas en el PDF DocumentaciónEntregable2.pdf
 %--------------------- Menú inicial
+imagenOriginal= eleccionImagen();
+
 printf('¿Qué funcionalidad del entregable se va a ejecutar?\n');
 printf('[1] Detección de bordes y perímetro\n');
 printf('[2] Detección de píxeles ocupados por la fruta y su área\n');
 printf('[3] Color de la fruta\n');
 apartado = input('Elige la opciÃ³n [1-3] ');
-
-imagenOriginal= imread(nombreRutaImagen);
 
 switch(apartado)
   case 1 %Detección de bordes y perímetro
